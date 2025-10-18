@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Ninja</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="crt-overlay"></div>
+    <main class="viewport">
+      <canvas id="game" width="320" height="180"></canvas>
+      <section class="hud">
+        <div class="hud-left">
+          <h1>Neon Ninja</h1>
+          <p class="subtitle">Assembly the fragments of the KIllstar and save LaserCity from the Black Ninja Clan and their evil leader Nonukai.</p>
+        </div>
+        <div class="hud-stats">
+          <div class="stat">
+            <span class="stat-label">SCORE</span>
+            <span class="stat-value" id="score">000000</span>
+            <span class="stat-badge hidden" id="multiplier">×2</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">LIFE</span>
+            <span class="stat-value" id="lives">03</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">WAVE</span>
+            <span class="stat-value" id="wave">01</span>
+          </div>
+        </div>
+      </section>
+      <section class="powerup-bar">
+        <div class="powerup-slot" id="boost-killstar">
+          <span class="slot-label">KILLSTAR</span>
+          <span class="slot-timer" id="boost-killstar-timer">Fragments 0/3</span>
+        </div>
+        <div class="powerup-slot" id="boost-rapid">
+          <span class="slot-label">RAPID</span>
+          <span class="slot-timer" id="boost-rapid-timer">0.0s</span>
+        </div>
+        <div class="powerup-slot" id="boost-slow">
+          <span class="slot-label">SLOW</span>
+          <span class="slot-timer" id="boost-slow-timer">0.0s</span>
+        </div>
+        <div class="powerup-slot" id="boost-phase">
+          <span class="slot-label">PHASE</span>
+          <span class="slot-timer" id="boost-phase-timer">0.0s</span>
+        </div>
+      </section>
+      <section class="controls">
+        <p>
+          Brug <span class="key">←</span> / <span class="key">→</span> til at
+          bevæge dig. <span class="key">Mellemrum</span> kaster en ninjastjerne.
+        </p>
+        <p class="powerup-hint">
+          K = Killstar Core (samle 3 for Killstar), R = Rapid Fire, S = Slow Motion, P = Phase Shift.
+          Skyd det neon-flyvende objekt for Score ×2.
+        </p>
+      </section>
+    </main>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
